@@ -1,6 +1,10 @@
 # sentiment_analysis
 
-The software implements sentiment analysis algorithms at two granularities.
+The software implements sentiment analysis algorithms at two granularities. 
+
+Note the meaning of a document depends on the context. 
+For interview analysis, a document is corresponding to a piece of note;
+For survey analysis, a document is obtained by collapsing all responses by a particular respondent (for that survey). 
 
 ### Global Analysis
 
