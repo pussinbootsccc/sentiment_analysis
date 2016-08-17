@@ -36,7 +36,7 @@ Each meta-info is represented as a Python object containing the following fields
 We split each doc per sentence, and tokenize each sentence into words. Stemming is performed using the Porter stemmer provided by `Python`'s natural language toolkit (`NLTK`). Common English stop words were removed from the token list.
 
 ##### How global keywords are extracted
-Top 40 keywords with the highest TF-IDF are chosen. TF stands for term-frequency and IDF stands for document-frequency. This is a standard approach for extracting the most informative vocabularies. 
+Top 128 keywords with the highest TF-IDF are chosen. TF stands for term-frequency and IDF stands for document-frequency. This is a standard approach for extracting the most informative vocabularies. 
 
 ##### How `allPercentage` is computed:
 ```
