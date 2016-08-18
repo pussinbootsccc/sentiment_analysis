@@ -9,9 +9,9 @@ For survey analysis, a document is obtained by collapsing all responses by a par
 ### Global Analysis
 
 *Input*:
-* `projectId`: Project ID of interest.
-* `surveyId`: Survey ID of interest. Note this argument will have no effect when `table == interview` or `table == both` (thus is recommended to be set to `0` in those cases).
-* `table`: Takes value of `interview`, `survey` or `both`. 
+* `projectId`: A positive integer, i.e. Project ID of interest.
+* `surveyId`: A positive integer, i.e. Survey ID of interest. The argument will have no effect when `table == interview` or `table == both` (thus is recommended to be set to `0` in those cases).
+* `table`: A string-valued variable taking values among either `interview`, `survey` or `both`. 
 
 *Output*: A list of automatically extracted keywords based on the specified constraints. 
 
@@ -26,9 +26,7 @@ Each keyword is represented as a Python object containing the following fields:
 ### Detailed Analysis
 
 *Input*:
-* `projectId`: Project ID of interest.
-* `surveyId`: Survey ID of interest. Note this argument will have no effect when `table == interview` or `table == both` (thus is recommended to be set to `0` in those cases).
-* `table`: Takes value of `interview`, `survey` or `both`. 
+same as for global analysis. 
 
 *Output*: A list of document-level meta-information corresponding to each doc.
 
