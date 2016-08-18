@@ -13,7 +13,7 @@ For survey analysis, a document is obtained by collapsing all responses by a par
 * `surveyId`: A positive integer, i.e. Survey ID of interest. The argument will have no effect when `table == interview` or `table == both` (thus is recommended to be set to `0` in those cases).
 * `table`: A string-valued variable taking values among either `interview`, `survey` or `both`. 
 
-*Output*: A list of automatically extracted keywords from a set of documents. The documents are selected based on the specified constraints---when `projectId = 123`, `surveyId=456` and `table=survey`, only question answers in survey 456 under project 123 will be used for analysis.
+*Output*: A list of automatically extracted keywords from a set of documents. The documents are chosen based on the specified constraints——when `projectId = 123`, `surveyId=456` and `table=survey`, only question answers in survey 456 under project 123 will be used for keywords selection.
 
 Each keyword is represented as a Python object containing the following fields:
 * `name`: Name of the keyword.
