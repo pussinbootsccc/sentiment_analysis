@@ -35,6 +35,7 @@ Each meta-info is represented as a Python object containing the following fields
   - `name`: Name of the keyword.
   - `score`: Sentiment score of the keyword in the given document (context). 
 * `score`: The overall sentiment score for the doc (details described below). A positive score indicates a positive overall sentiment of the document, and vice versa.
+* `respondentId`: Id of the current document. The field will be equal to `respondentId` if `table == survey`, and equal to `id` if `table == interview`.
 
 ## Implementation Details
 
