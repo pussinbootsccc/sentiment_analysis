@@ -13,7 +13,7 @@ For survey analysis, a document is obtained by collapsing all responses by a par
 * `surveyId`: A positive integer, i.e. Survey ID of interest. The argument will have no effect when `table == interview` or `table == both` (thus is recommended to be set to `0` in those cases).
 * `table`: A string-valued variable taking values among either `interview`, `survey` or `both`. 
 
-*Output*: A list of automatically extracted keywords based on the specified constraints. 
+*Output*: A list of automatically extracted keywords from a set of documents. The documents are selected based on the specified constraints---when `projectId = 123`, `surveyId=456` and `table=survey`, only question answers in survey 456 under project 123 will be used for analysis.
 
 Each keyword is represented as a Python object containing the following fields:
 * `name`: Name of the keyword.
@@ -28,7 +28,7 @@ Each keyword is represented as a Python object containing the following fields:
 *Input*:
 same as for global analysis. 
 
-*Output*: A list of document-level meta-information corresponding to each doc.
+*Output*: A list of document-level meta-information corresponding to each doc. The docs are selected based on the specified constraints per input.
 
 Each meta-info is represented as a Python object containing the following fields:
 * `keywrods`: A list of keywords that appeared in the doc. This is the intersection of the keywords identified by global analysis and the keywords appeared in the doc. Each keyword here is an object containing two fields:
