@@ -54,12 +54,12 @@ allPercentage = #(docs containing the keyword) / #(docs)
 posPercentage = #(docs with positive sentiment containing the keyword) / #(docs)
 ```
 
-##### How to score a doc:
+##### How do we score a doc:
 By aggregating the sentiment scores of its sentences. The sentiment score for a sentence is obtained by aggregating the token scores, normalized by the sentence length `#(tokens in the sentence)`. Token scores are defined in `*.yml` files. We let `score = +1` for positive tokens and `score = -1` for the negative ones. 
 
-##### How to score a keyword for a given doc:
+##### How do we score a keyword for a given doc:
 By aggregating the sentiment scores of sentences where the keyword appears in. 
 
 ## Software Dependencies:
 
-Carrying out the sentiment analysis requires `Python 2.7` with the `NLTK` package installed, and a set of external `*.yml` files containing predefined sentiment of some seed keywords. `Jython` is also required to allow the python scripts to interact with the `Java` controller and the `mySQL` backend. 
+Carrying out the sentiment analysis requires Python 2.7 with the NLTK package installed, and a set of external `*.yml` files containing predefined sentiment of some seed keywords. Jython is also required to allow the python scripts to interact with the Java controller and the `mySQL` backend. More details about how Jython communicates with the database backend can be found at the definition of class `DBHander` in `utils/DataHandler.py`.
