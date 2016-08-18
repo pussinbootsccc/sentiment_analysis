@@ -8,19 +8,27 @@ For survey analysis, a document is obtained by collapsing all responses by a par
 
 ### Global Analysis
 
-*Input*: A list of documents.
+*Input*:
+* `projectId`: Project ID of interest.
+* `surveyId`: Survey ID of interest. Note this argument will have no effect when `table == interview` or `table == both` (thus is recommended to be set to `0` in those cases).
+* `table`: Takes value of `interview`, `survey` or `both`. 
 
-*Output*: A list of automatically extracted keywords.
+*Output*: A list of automatically extracted keywords based on the specified constraints. 
 
 Each keyword is represented as a Python object containing the following fields:
 * `name`: Name of the keyword.
 * `allPercentage`: Proportion of docs containing the keyword.
 * `negPercentage`: Proportion of docs with negative sentiment containing the keyword.
 * `posPercentage`: Proportion of docs with positive sentiment containing the keyword.
+* `isFromInterview`: Takes value `1` if the keyword is present in the interview table; takes value `0` otherwise.
+* `isFromSurvey`: Takes value `1` if the keyword is present in the survey table; takes value `0` otherwise.
 
 ### Detailed Analysis
 
-*Input*: A list of documents.
+*Input*:
+* `projectId`: Project ID of interest.
+* `surveyId`: Survey ID of interest. Note this argument will have no effect when `table == interview` or `table == both` (thus is recommended to be set to `0` in those cases).
+* `table`: Takes value of `interview`, `survey` or `both`. 
 
 *Output*: A list of document-level meta-information corresponding to each doc.
 
